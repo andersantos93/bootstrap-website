@@ -1,0 +1,22 @@
+* {
+  font-family: Montserrat;
+}
+
+.features {
+  display: flex;
+  height: 435px;
+  background-color: #252b42;
+  color: white;
+}
+
+.features .container {
+  align-content: center;
+}
+
+@media screen and (max-width: 575px) {
+  .features {
+    height: 100%;
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
