@@ -4,6 +4,7 @@
 
 :root {
   --container-dark-color: #252b42;
+  --primary-color: #23a6f0;
 }
 
 .features {
@@ -21,7 +22,8 @@
   background-color: #8ec2f2;
 }
 
-.industry-2 {
+.industry-2,
+.pricing {
   background-color: var(--container-dark-color);
   color: white;
 }
@@ -45,7 +47,7 @@
 }
 
 .link {
-  background-color: #23a6f0;
+  background-color: var(--primary-color);
   color: white;
   padding: 10px;
   text-decoration: none;
@@ -62,16 +64,155 @@
   display: block;
 }
 
+.pricing h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.pricing p {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.pricing .card {
+  margin-bottom: 4rem !important;
+}
+
+.pricing .card-title {
+  color: #000;
+}
+
+.pricing .card-subtitle {
+  color: #737373;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.pricing .price {
+  display: grid;
+  justify-content: center;
+}
+
+.price-value {
+  grid-area: value;
+  font-weight: 700;
+  font-size: 40px;
+  justify-self: end;
+}
+
+.price-currency {
+  grid-area: currency;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: start;
+}
+
+.price-terms {
+  grid-area: terms;
+  font-weight: 600;
+  font-size: 14;
+  color: #8ec2f2;
+}
+
+.price-value,
+.price-currency {
+  color: #23a6f0;
+}
+
+.pricing .list-group-item {
+  border: none;
+  font-weight: 600;
+  text-align: start;
+  font-size: 14px;
+}
+
+.pricing .list-group-item img {
+  float: left;
+}
+
+.description-plan {
+  display: grid;
+}
+
+.description-plan .list-group {
+  grid-area: list-group;
+}
+
+.description-plan a {
+  grid-area: try-for-free;
+}
+
+.alert {
+  background: #e77c40;
+  width: 90px;
+  height: 90px;
+  border-radius: 52px;
+  padding-top: 27px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.alert.translate-middle {
+  transform: translate(-120%, -50%) !important;
+}
+
+.btn-try-for-free {
+  background-color: var(--primary-color);
+  height: 52px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 575px) {
   .features {
     height: 100%;
     padding-top: 6rem !important;
     padding-bottom: 6rem !important;
   }
+
+  .pricing .price {
+    grid-template-areas:
+      "value currency"
+      "value terms";
+  }
+
+  .pricing .price-value {
+    margin-right: 10px;
+  }
+
+  .description-plan {
+    grid-template-areas:
+      "list-group"
+      "try-for-free";
+  }
 }
 
 @media screen and (min-width: 576px) {
   .industry-2 .container {
     margin-top: 50px;
+  }
+
+  .pricing p {
+    margin-bottom: 85px !important;
+    font-weight: 400;
+  }
+
+  .pricing .price {
+    grid-template-areas:
+      "value currency"
+      "terms terms";
+  }
+
+  .price-currency {
+    font-size: 40px;
+  }
+
+  .description-plan {
+    grid-template-areas:
+      "try-for-free"
+      "list-group";
   }
 }
