@@ -16,4 +16,4 @@ Author: Captain Design PRO
 
 Link: https://www.figma.com/community/file/946390947835621236
 
-<img src="./images/cover.png">
+<img src="./images/background.png">
