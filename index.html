@@ -27,8 +27,77 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BrandName</a>
+        <div class="d-flex">
+          <button class="navbar-toggler" type="button">
+            <img src="./images/search.png" />
+          </button>
+          <button class="navbar-toggler" type="button">
+            <img src="./images/shopping-cart.png" />
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="./images/hamburger-menu.png" />
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mt-1 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mt-1 mb-lg-0 nav-right">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="btn btn-primary become-member-button w-100"
+                >Become a member</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro section -->
+    <section class="intro">
+      <div class="intro-background">
+        <div class="intro-content p-5 p-lg-5">
+          <h1>We Ensure A Best Insurance Service</h1>
+
+          <p>
+            We know how large objects will act, but things on a small scale just
+            do not act that way.
+          </p>
+
+          <div class="links">
+            <a class="btn btn-primary btn-link" href="#">Get Quote Now</a>
+            <a class="btn btn-outline-primary" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section class="features py-5">
       <div class="container text-center">
@@ -185,7 +254,7 @@
     </section>
 
     <!-- Second section of Industry -->
-    <section class="industry-2 py-5">
+    <section class="industry-2 py-5" id="product">
       <div class="container text-center">
         <h1 class="px-5 mb-4 d-md-none">
           We are Optimists Who Love To Work Together
@@ -205,11 +274,13 @@
               <div
                 class="position-absolute start-50 translate-middle-x bottom-0 pb-4 w-auto"
               >
-                <span class="subtitle">Tax Management</span>
-                <span class="title"
+                <span class="subtitle d-block">Tax Management</span>
+                <span class="title d-block"
                   >Life Tips From Top Ten Adventure Travelers</span
                 >
-                <a class="link" href="#">View Project</a>
+                <a class="btn-primary btn-link d-block" href="#"
+                  >View Project</a
+                >
               </div>
             </div>
           </div>
@@ -219,11 +290,13 @@
               <div
                 class="position-absolute start-50 translate-middle-x bottom-0 pb-4 w-auto"
               >
-                <span class="subtitle">Tax Management</span>
-                <span class="title"
+                <span class="subtitle d-block">Tax Management</span>
+                <span class="title d-block"
                   >Life Tips From Top Ten Adventure Travelers</span
                 >
-                <a class="link" href="#">View Project</a>
+                <a class="btn-primary btn-link d-block" href="#"
+                  >View Project</a
+                >
               </div>
             </div>
           </div>
@@ -233,11 +306,13 @@
               <div
                 class="position-absolute start-50 translate-middle-x bottom-0 pb-4 w-auto"
               >
-                <span class="subtitle">Tax Management</span>
-                <span class="title"
+                <span class="subtitle d-block">Tax Management</span>
+                <span class="title d-block"
                   >Life Tips From Top Ten Adventure Travelers</span
                 >
-                <a class="link" href="#">View Project</a>
+                <a class="btn-primary btn-link d-block" href="#"
+                  >View Project</a
+                >
               </div>
             </div>
           </div>
@@ -247,11 +322,13 @@
               <div
                 class="position-absolute start-50 translate-middle-x bottom-0 pb-4 w-auto"
               >
-                <span class="subtitle">Tax Management</span>
-                <span class="title"
+                <span class="subtitle d-block">Tax Management</span>
+                <span class="title d-block"
                   >Life Tips From Top Ten Adventure Travelers</span
                 >
-                <a class="link" href="#">View Project</a>
+                <a class="btn-primary btn-link d-block" href="#"
+                  >View Project</a
+                >
               </div>
             </div>
           </div>
@@ -259,7 +336,8 @@
       </div>
     </section>
 
-    <section class="pricing py-5">
+    <!-- Pricing section -->
+    <section class="pricing py-5" id="pricing">
       <div class="container text-center">
         <h1 class="px-5 mb-4">Pricing</h1>
 
@@ -447,6 +525,7 @@
     <!-- Contact Section (Desktop Version) -->
     <section
       class="py-5 d-none d-lg-block"
+      id="contact"
       style="
         background: linear-gradient(
             to right,
@@ -530,11 +609,7 @@
               <label for="message" style="color: #b0b0b0">Message</label>
             </div>
 
-            <button
-              type="submit"
-              class="btn btn-primary py-3 fw-bold"
-              style="background-color: #23a6f0; width: 40%; margin-top: 20px"
-            >
+            <button type="submit" class="btn btn-primary py-3 fw-bold">
               Book Appointment
             </button>
           </form>
